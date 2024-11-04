@@ -4,7 +4,6 @@ import com.es.pimercomponente.model.Saludo
 import com.es.pimercomponente.model.Usuario
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
@@ -32,7 +31,7 @@ class HolaMundoController {
     }
 
 
-    @PostMapping("/insert")
+    @PostMapping("/user")
     fun postUser(
         @RequestParam nombre:String,
         @RequestParam pass:String
@@ -44,7 +43,7 @@ class HolaMundoController {
         return null
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/user")
     fun deleteUser(
         @RequestParam nombre:String
     ):String {
